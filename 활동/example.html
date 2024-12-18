@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 1 - 웹 디자인 개선</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; color: #333; }
+        header { background-color: #3498db; color: white; padding: 20px; text-align: center; }
+        main { padding: 20px; text-align: center; }
+        section { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        .trial-list { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px; }
+        .trial-button { background-color: #3498db; color: white; padding: 15px 30px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; width: 80%; max-width: 400px; }
+        .trial-button:hover { background-color: #2980b9; }
+        .trial-description { font-size: 14px; color: #666; padding: 10px; background-color: #ecf0f1; border-radius: 5px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>프로젝트 1: 웹 디자인 개선</h1>
+    </header>
+    <main>
+        <section>
+            <h2>프로젝트 개요</h2>
+            <p>웹사이트를 깔끔하게 디자인하고 사용자 경험을 개선하는 프로젝트입니다.</p>
+            <img src="https://via.placeholder.com/600x300" alt="프로젝트 이미지" style="width:100%; border-radius: 10px;">
+        </section>
+
+        <section>
+            <h2>항암 임상시험 목록</h2>
+            <div class="trial-list">
+                <button class="trial-button" onclick="toggleDescription('trial1')">항암 임상시험 1</button>
+                <div id="trial1" class="trial-description" style="display: none;">
+                    <p>이 임상시험은 새로운 항암제를 실험하는 연구로, 특정 유형의 암에 대한 효과를 평가합니다.</p>
+                </div>
+
+                <button class="trial-button" onclick="toggleDescription('trial2')">항암 임상시험 2</button>
+                <div id="trial2" class="trial-description" style="display: none;">
+                    <p>이 임상시험은 화학 요법과 면역 요법의 결합 효과를 시험하고 있습니다.</p>
+                </div>
+
+                <button class="trial-button" onclick="toggleDescription('trial3')">항암 임상시험 3</button>
+                <div id="trial3" class="trial-description" style="display: none;">
+                    <p>이 연구는 항암제를 사용한 새로운 치료법을 시험하여 부작용을 최소화하는 방법을 찾고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 프로젝트 1 페이지
+    </footer>
+
+    <script>
+        function toggleDescription(trialId) {
+            const description = document.getElementById(trialId);
+            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
